@@ -43,7 +43,7 @@ export default function Education() {
             </div>
             
             <div className='flex-grow'>
-              <h3 className='text-xl font-bold text-[var(--text-primary)] transition-colors'>Sarjana Komputer (S.Kom)</h3>
+              <h3 className='text-xl font-bold text-[var(--text-primary)] transition-colors'>Sarjana Teknik (S.T)</h3>
               <p className='text-[var(--accent-blue)] font-semibold text-lg transition-colors'>Teknik Informatika</p>
               <p className='text-[var(--text-secondary)] transition-colors mt-1'>Universitas Halu Oleo</p>
             </div>
