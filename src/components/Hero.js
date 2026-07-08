@@ -15,8 +15,26 @@ export default function Hero() {
       <div className='relative max-w-6xl mx-auto px-6 z-10 py-6 w-full'>
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center'>
           
-          {/* Kolom Kiri: Teks & Tombol (Left Aligned) */}
-          <div className={`lg:col-span-7 space-y-5 text-center lg:text-left scroll-animate ${isVisible ? 'visible' : ''}`}>
+          {/* Kolom Kanan: Foto Profil (Ditempatkan di atas pada mobile dengan order-first) */}
+          <div className={`lg:col-span-5 flex justify-center items-center scroll-animate stagger-1 order-first lg:order-last ${isVisible ? 'visible' : ''}`}>
+            <div className='relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 flex items-center justify-center'>
+              
+              {/* Glowing Blob */}
+              <div className='absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-purple-500/20 dark:from-cyan-500/30 dark:to-purple-500/30 rounded-full blur-3xl animate-pulse pointer-events-none'></div>
+              
+              {/* Wadah Foto Profil */}
+              <div className='profile-image-container relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 overflow-hidden border border-blue-500/30 shadow-2xl flex items-center justify-center z-10'>
+                <img 
+                  src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000' 
+                  alt='Dwi Hikmah Ramadhani' 
+                  className='w-full h-full object-cover'
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Kolom Kiri: Teks & Tombol (Ditempatkan di bawah pada mobile dengan order-last) */}
+          <div className={`lg:col-span-7 space-y-5 text-center lg:text-left scroll-animate order-last lg:order-first ${isVisible ? 'visible' : ''}`}>
             <span className='inline-block text-sm font-extrabold text-[var(--accent-blue)] tracking-wider uppercase mb-1'>
               👋 Halo, Saya
             </span>
@@ -42,7 +60,7 @@ export default function Hero() {
               </a>
             </div>
 
-            {/* Social Icons & Download */}
+            {/* Social Icons */}
             <div className='flex justify-center lg:justify-start gap-4 pt-3'>
               <a href='mailto:dwihikmahrmdni@gmail.com' className='w-12 h-12 bg-[var(--bg-secondary)] rounded-full flex items-center justify-center text-[var(--text-secondary)] hover:text-[var(--accent-blue)] hover:bg-[var(--card-hover)] transition-all duration-300 card-hover subtle-glow border border-[var(--border-color)]/20'>
                 <FiMail size={20} />
@@ -58,24 +76,6 @@ export default function Hero() {
               >
                 <FiDownload size={20} />
               </a>
-            </div>
-          </div>
-
-          {/* Kolom Kanan: Foto Profil Futuristik & Interaktif */}
-          <div className={`lg:col-span-5 flex justify-center items-center scroll-animate stagger-1 ${isVisible ? 'visible' : ''}`}>
-            <div className='relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 flex items-center justify-center'>
-              
-              {/* Glowing Blob (Efek Cahaya 3D) */}
-              <div className='absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-purple-500/20 dark:from-cyan-500/30 dark:to-purple-500/30 rounded-full blur-3xl animate-pulse pointer-events-none'></div>
-              
-              {/* Wadah Foto Profil Melengkung Kustom */}
-              <div className='profile-image-container relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 overflow-hidden border border-blue-500/30 shadow-2xl flex items-center justify-center z-10'>
-                <img 
-                  src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000' 
-                  alt='Dwi Hikmah Ramadhani' 
-                  className='w-full h-full object-cover'
-                />
-              </div>
             </div>
           </div>
 
