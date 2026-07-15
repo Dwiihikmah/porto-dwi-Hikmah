@@ -15,7 +15,7 @@ function App() {
   return (
     <div className='min-h-screen bg-[var(--bg-primary)] transition-theme'>
       <Header />
-      <main className='pt-24'>
+      <main className='pt-16'>
         <Hero />
         <About />
         <Education />

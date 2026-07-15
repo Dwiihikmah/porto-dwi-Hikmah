@@ -5,7 +5,7 @@ export default function Hero() {
   const [containerRef, isVisible] = useScrollAnimation();
 
   return (
-    <section ref={containerRef} className='relative min-h-screen flex items-center justify-center overflow-hidden bg-[var(--bg-primary)] pt-16 transition-colors'>
+    <section ref={containerRef} className='relative min-h-screen flex items-center justify-center overflow-hidden bg-[var(--bg-primary)] pt-8 lg:pt-6 transition-colors'>
       {/* Decorative Blur Blobs */}
       <div className='absolute inset-0 overflow-hidden pointer-events-none z-0'>
         <div className='absolute top-20 left-10 w-72 h-72 bg-blue-400/10 dark:bg-blue-500/5 rounded-full filter blur-3xl opacity-30 animate-pulse'></div>
@@ -17,24 +17,25 @@ export default function Hero() {
           
           {/* Kolom Kanan: Foto Profil (Ditempatkan di atas pada mobile dengan order-first) */}
           <div className={`lg:col-span-5 flex justify-center items-center scroll-animate stagger-1 order-first lg:order-last ${isVisible ? 'visible' : ''}`}>
-            <div className='relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 flex items-center justify-center'>
+            <div className='relative w-80 h-80 sm:w-[24rem] sm:h-[24rem] md:w-[26rem] md:h-[26rem] flex items-center justify-center'>
               
               {/* Glowing Blob */}
               <div className='absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-purple-500/20 dark:from-cyan-500/30 dark:to-purple-500/30 rounded-full blur-3xl animate-pulse pointer-events-none'></div>
               
               {/* Wadah Foto Profil */}
-              <div className='profile-image-container relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 overflow-hidden border border-blue-500/30 shadow-2xl flex items-center justify-center z-10'>
+              <div className='profile-image-container relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 overflow-hidden border border-blue-500/30 shadow-2xl flex items-center justify-center z-10'>
                 <img 
-                  src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000' 
+                  src='/images/foto-dwi.png' 
                   alt='Dwi Hikmah Ramadhani' 
-                  className='w-full h-full object-cover'
+                  className='w-full h-full object-cover object-center'
+                  style={{ transform: 'scale(1.1) rotate(26deg)' }}
                 />
               </div>
             </div>
           </div>
 
           {/* Kolom Kiri: Teks & Tombol (Ditempatkan di bawah pada mobile dengan order-last) */}
-          <div className={`lg:col-span-7 space-y-5 text-center lg:text-left scroll-animate order-last lg:order-first ${isVisible ? 'visible' : ''}`}>
+          <div className={`lg:col-span-7 space-y-4 text-center lg:text-left scroll-animate order-last lg:order-first ${isVisible ? 'visible' : ''}`}>
             <span className='inline-block text-sm font-extrabold text-[var(--accent-blue)] tracking-wider uppercase mb-1'>
               👋 Halo, Saya
             </span>
@@ -49,7 +50,7 @@ export default function Hero() {
             </p>
 
             {/* Tombol CTA */}
-            <div className='flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-2'>
+            <div className='flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-1'>
               <a href='#contact' className='bg-[var(--accent-blue)] text-white px-8 py-3 rounded-xl font-semibold hover:bg-[var(--accent-blue-dark)] transition-all duration-300 inline-flex items-center justify-center gap-2 btn-glow text-base subtle-glow'>
                 Hubungi Saya
                 <FiArrowRight size={18} />
@@ -61,7 +62,7 @@ export default function Hero() {
             </div>
 
             {/* Social Icons */}
-            <div className='flex justify-center lg:justify-start gap-4 pt-3'>
+            <div className='flex justify-center lg:justify-start gap-4 pt-2'>
               <a href='mailto:dwihikmahrmdni@gmail.com' className='w-12 h-12 bg-[var(--bg-secondary)] rounded-full flex items-center justify-center text-[var(--text-secondary)] hover:text-[var(--accent-blue)] hover:bg-[var(--card-hover)] transition-all duration-300 card-hover subtle-glow border border-[var(--border-color)]/20'>
                 <FiMail size={20} />
               </a>
